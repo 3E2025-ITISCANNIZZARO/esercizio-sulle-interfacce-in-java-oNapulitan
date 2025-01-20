@@ -1,0 +1,17 @@
+class Vampiro implements Personaggio {
+    private int forza;
+
+    public Vampiro() {
+        this.forza = 15;
+    }
+
+    @Override
+    public void combatti() {
+        forza -= 2;
+    }
+
+    @Override
+    public int getForza() {
+        return forza;
+    }
+}

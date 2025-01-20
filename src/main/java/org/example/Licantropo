@@ -1,0 +1,23 @@
+class Licantropo implements Personaggio {
+    private int forza;
+    private boolean lunaPiena;
+
+    public Licantropo(boolean lunaPiena) {
+        this.lunaPiena = lunaPiena;
+        this.forza = lunaPiena ? 15 : 10;
+    }
+
+    @Override
+    public void combatti() {
+        if (lunaPiena) {
+            forza -= 2; // Nella luna piena
+        } else {
+            forza -= 3; // Altrimenti
+        }
+    }
+
+    @Override
+    public int getForza() {
+        return forza;
+    }
+}

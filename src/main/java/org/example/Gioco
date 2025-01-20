@@ -1,0 +1,24 @@
+public class Gioco {
+    public static void main(String[] args) {
+        // Creazione dei personaggi
+        SuperEroe superEroe = new SuperEroe();
+        Licantropo licantropo = new Licantropo(false); // Non è luna piena
+        Vampiro vampiro = new Vampiro();
+
+        // Combattimenti
+        for (int i = 0; i < 3; i++) {
+            superEroe.combatti();
+        }
+
+        vampiro.combatti();
+
+        for (int i = 0; i < 2; i++) {
+            licantropo.combatti();
+        }
+
+        // Stampa della forza rimanente
+        System.out.println("Forza rimanente SuperEroe: " + superEroe.getForza());
+        System.out.println("Forza rimanente Licantropo: " + licantropo.getForza());
+        System.out.println("Forza rimanente Vampiro: " + vampiro.getForza());
+    }
+}
